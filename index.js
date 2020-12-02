@@ -3,8 +3,8 @@ const URL = "http://fb.dut.udn.vn/PageDangNhap.aspx"
 const puppeteer = require("puppeteer")
 
 const user = {
-  username: "102170143",
-  password: "dutdut123",
+  username: "mssv",
+  password: "matkhau",
 }
 
 const main = async () => {
@@ -65,8 +65,8 @@ const main = async () => {
       await newPage.evaluate(() => {
         const quesResults = document.querySelectorAll(".quesResult")
         quesResults.forEach((ques, index) => {
-          if (index === 35 || index === 36) {
-            ques.querySelector("input:nth-child(2)").click()
+          if (index === 30 || index === 31) {
+            ques.querySelector("input:nth-child(3)").click()
             return
           }
           ques.querySelector("input").click()
