@@ -80,6 +80,8 @@ const main = async () => {
         })
       })
 
+      await newPage.waitForTimeout(1000)
+
       await newPage.evaluate(() => {
         document.querySelector("#DG_btnXacNhan").click()
       })
